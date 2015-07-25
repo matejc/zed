@@ -10,7 +10,8 @@ require.config({
     },
 });
 
-window.isNodeWebkit = typeof window.chrome === "undefined";
+// obviously not ok, this way zed will work only if ran with webkit, this was tested with nwjs 0.12.2
+window.isNodeWebkit = true;
 
 /* global ace, $, _ */
 require(["../dep/architect", "./lib/options", "./fs_picker", "text!../manual/intro.md"], function(architect, options, fsPicker, introText) {
